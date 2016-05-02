@@ -1,0 +1,33 @@
+{
+  "name": "shuffle",
+  "version": "1.0.0",
+  "description": "Application for shuffling music using a die.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ankhuve/shuffle"
+  },
+  "keywords": [
+    "music",
+    "shuffle",
+    "dice",
+    "die",
+    "spotify"
+  ],
+  "author": "Erik Forsberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankhuve/shuffle/issues"
+  },
+  "homepage": "https://github.com/ankhuve/shuffle",
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.1",
+    "jquery": "^2.2.3"
+  }
+}

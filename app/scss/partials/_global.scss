@@ -1,0 +1,62 @@
+body{
+  overflow: hidden;
+  background: $bg-color;
+  font-family: $font-family-sans-serif;
+  color: $smoke;
+
+  a{
+    color: $jet;
+
+    &:visited{
+      color: $jet;
+    }
+
+    &:link{
+      color: $jet;
+    }
+  }
+
+  h1, h2, h3, h4{
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+
+  h3 {
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    //padding: 0.5rem;
+    line-height: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .container{
+    height: 100vh;
+    width: 100%;
+  }
+
+  .button{
+    color: $smoke;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    &:hover{
+      background: $secondary-color;
+      border-color: $secondary-color;
+      color: $smoke;
+    }
+
+    &:focus{
+      color: $smoke;
+    }
+  }
+
+  .row-md{
+    display: inline-block;
+  }
+}
