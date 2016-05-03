@@ -47,3 +47,5 @@ Temporary Items
 .apdisk
 node_modules
 .idea
+app/dist
+app/dist/js/all.js

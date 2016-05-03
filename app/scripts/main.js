@@ -1,27 +1,29 @@
 console.log("hej");
 
+var dice = document.getElementsByClassName("dice");
 document.getElementById("shuffleButton").addEventListener("click", shuffle);
 
 
 function shuffle(){
-    randSide = Math.ceil(Math.random() * 6);
+    resetDice();
+    var randSide = Math.ceil(Math.random() * 6);
     console.log(randSide);
-    dice = document.getElementsByClassName("dice");
     for(var i = 1; i <= dice.length; i++){
         if(i != randSide){
             var currentSide = document.getElementById("side" + (i));
-            if( ! currentSide.classList.contains("faded")){
-                currentSide.classList.add("faded");
-            }
+            currentSide.classList.add("faded");
 
         } else{
-            if( ! dice[i].classList.contains("active")){
-                dice[i].classList.add("active");
-
-            }
+            dice[i - 1].classList.add("active");
         }
 
         console.log("ifew");
     }
 }
 
+function resetDice(){
+    for(var i = 0; i < dice.length; i++){
+        console.log(i);
+        dice[i].className = "dice";
+    }
+}
