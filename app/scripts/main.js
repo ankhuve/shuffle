@@ -1,4 +1,5 @@
 var dice = document.getElementsByClassName("dice");
+var clientID = '9e3ffb869da44cc889f888e63643728e';
 var songs = [
     '6ygVGWsgqv8xKlgb9coEXQ',
     '64OcVQq3FBoGm2twUd3044',
@@ -29,6 +30,24 @@ function getTrack(trackID) {
         }
     };
     xhttp.open("GET", "https://api.spotify.com/v1/tracks/" + trackID, true);
+    xhttp.send();
+}
+
+function authorize(trackID) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            var trackURL = JSON.parse(xhttp.responseText).preview_url;
+            var audioObj = document.getElementById("audioControl");
+            var audioSrc = document.getElementById("audioSource");
+            audioSrc.src = trackURL;
+            audioObj.load();
+            audioObj.play();
+            //createMusicObject(trackURL);
+            console.log(trackURL);
+        }
+    };
+    xhttp.open("GET", "https://accounts.spotify.com/authorize/?" + trackID, true);
     xhttp.send();
 }
 
